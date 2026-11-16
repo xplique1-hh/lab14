@@ -1,4 +1,6 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
+#include <locale.h>
 #define MAX 1000
 int countLocalMaxima(const int* a, int n) {
     int count = 0;
@@ -9,7 +11,8 @@ int countLocalMaxima(const int* a, int n) {
     }
     return count;
 }
-int main(void) {
+int main() {
+    setlocale(LC_ALL, "RUS");
     int n;
     int a[MAX];
     printf("Введите n: ");
